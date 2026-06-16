@@ -40,7 +40,7 @@ class VideoAdmin(admin.ModelAdmin):
             'fields': ('title', 'description', 'year', 'rating', 'duration', 'quality', 'category', 'tags', 'studio')
         }),
         ('Медиа', {
-            'fields': ('thumbnail', 'thumbnail_url', 'backdrop', 'backdrop_url', 'video_file', 'video_url')
+            'fields': ('thumbnail', 'thumbnail_url', 'backdrop', 'backdrop_url', 'video_file', 'video_url', 'bunny_video_id')
         }),
         ('Флаги', {
             'fields': ('is_new', 'is_popular', 'is_hero')
