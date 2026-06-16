@@ -63,4 +63,4 @@ class VideoDetailSerializer(VideoListSerializer):
     seasons = SeasonSerializer(many=True, read_only=True)
 
     class Meta(VideoListSerializer.Meta):
-        fields = VideoListSerializer.Meta.fields + ['seasons', 'video_url', 'created_at']
+        fields = VideoListSerializer.Meta.fields + ['seasons', 'video_url', 'bunny_video_id', 'created_at']

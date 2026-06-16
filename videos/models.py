@@ -63,6 +63,7 @@ class Video(models.Model):
 
     video_file = models.FileField('Видео файл', upload_to='videos/', blank=True)
     video_url = models.URLField('URL видео', blank=True)
+    bunny_video_id = models.CharField('Bunny Stream Video ID', max_length=100, blank=True)
 
     views = models.PositiveIntegerField('Просмотры', default=0)
     studio = models.CharField('Студия', max_length=100, blank=True)
