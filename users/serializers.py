@@ -43,7 +43,8 @@ class RegisterSerializer(serializers.ModelSerializer):
 class TajflixTokenSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
-        if not self.user.is_email_verified:
+        from django.conf import settings
+        if settings.REQUIRE_EMAIL_VERIFICATION and not self.user.is_email_verified:
             raise serializers.ValidationError(
                 {'detail': 'Подтвердите ваш email перед входом. Проверьте почту.'}
             )

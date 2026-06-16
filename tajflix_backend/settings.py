@@ -145,6 +145,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = 'Tajflix <noreply@tajflix.com>'
 
 FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:3000')
+REQUIRE_EMAIL_VERIFICATION = os.getenv('REQUIRE_EMAIL_VERIFICATION', 'False') == 'True'
 
 AUTHENTICATION_BACKENDS = [
     'users.backends.EmailOrUsernameBackend',

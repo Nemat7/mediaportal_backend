@@ -30,7 +30,7 @@ class RegisterView(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         from django.conf import settings
-        if settings.DEBUG:
+        if settings.DEBUG or not settings.REQUIRE_EMAIL_VERIFICATION:
             user.is_active = True
             user.is_email_verified = True
             user.save()
