@@ -12,3 +12,4 @@ PyJWT==2.13.0
 python-dotenv==1.2.2
 sqlparse==0.5.5
 whitenoise==6.12.0
+django-anymail[resend]==13.0
